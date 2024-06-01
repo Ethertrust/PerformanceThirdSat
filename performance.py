@@ -1,9 +1,9 @@
-import gs
+import gs2
 import mdb
 from datetime import datetime as dt
 
 def getGSheetNames():
-    return gs.read('1Neha8OoG_OORL8sd-1yleBIJB2XjTWj_PqsGSjN2CsY', 'b Performance')
+    return gs2.read('1Neha8OoG_OORL8sd-1yleBIJB2XjTWj_PqsGSjN2CsY', 'b Performance')
 
 def genPerformance(names):
     perf = []
