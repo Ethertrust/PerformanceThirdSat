@@ -1,4 +1,4 @@
-import gspread
+#import gspread
 
 gc = []#gspread.service_account(filename="C:\\Users\\HYPER\\PycharmProjects\\Classes B\\Thursday\\8\\sa_creds_new.json")
 
@@ -102,9 +102,11 @@ def read(SAMPLE_SPREADSHEET_ID, SAMPLE_RANGE_NAME):
             'Шабанова Александра Эдуардовна']
 
 def write(data, SAMPLE_SPREADSHEET_ID, sheetname):
-    sh = gc.open_by_key(SAMPLE_SPREADSHEET_ID)
-    worksheet = sh.worksheet(sheetname)
-    worksheet.update('A3', data)
+    # sh = gc.open_by_key(SAMPLE_SPREADSHEET_ID)
+    # worksheet = sh.worksheet(sheetname)
+    # worksheet.update('A3', data)
+    for el in data:
+        print(el)
 
 if __name__ == '__main__':
     # for val in read('13UIj4U0ry16Ib5W6dWMrtCpNyv-5TW5hUMzIJlkIFb4', 'b Performance'):

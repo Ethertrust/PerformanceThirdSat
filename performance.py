@@ -111,6 +111,4 @@ if __name__ == '__main__':
     names = getGSheetNames()
     #print(names)
     table = performance(names, data)
-    #gs.write(table,'1Neha8OoG_OORL8sd-1yleBIJB2XjTWj_PqsGSjN2CsY', 'b Performance')
-    for el in table:
-        print(el)
+    gs2.write(table,'1Neha8OoG_OORL8sd-1yleBIJB2XjTWj_PqsGSjN2CsY', 'b Performance')
