@@ -3,7 +3,7 @@ import mdb
 from datetime import datetime as dt
 
 def getGSheetNames():
-    return [el.tolist()[0] for el in gs.read('1Neha8OoG_OORL8sd-1yleBIJB2XjTWj_PqsGSjN2CsY', 'b Performance').values]
+    return gs.read('1Neha8OoG_OORL8sd-1yleBIJB2XjTWj_PqsGSjN2CsY', 'b Performance')
 
 def genPerformance(names):
     perf = []
@@ -111,4 +111,6 @@ if __name__ == '__main__':
     names = getGSheetNames()
     #print(names)
     table = performance(names, data)
-    gs.write(table,'1Neha8OoG_OORL8sd-1yleBIJB2XjTWj_PqsGSjN2CsY', 'b Performance')
+    #gs.write(table,'1Neha8OoG_OORL8sd-1yleBIJB2XjTWj_PqsGSjN2CsY', 'b Performance')
+    for el in table:
+        print(el)
